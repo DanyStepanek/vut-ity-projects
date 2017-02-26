@@ -1,0 +1,11 @@
+.*
+!.gitignore
+
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.fls
+*.log
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex.gz
