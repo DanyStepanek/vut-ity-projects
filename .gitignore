@@ -9,3 +9,7 @@
 ## Build tool auxiliary files:
 *.fdb_latexmk
 *.synctex.gz
+
+## Intermediate documents:
+*.dvi
+*.ps
