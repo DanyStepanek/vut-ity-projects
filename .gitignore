@@ -13,3 +13,6 @@
 ## Intermediate documents:
 *.dvi
 *.ps
+
+# Converted images
+*-eps-converted-to.pdf
