@@ -152,15 +152,20 @@
 		Pro\texttt{ algorithm2e }zase tuhle:
 		http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf.
 	}}. Příklad použití prostředí\texttt{ algorithm2e }viz Algoritmus \ref{algorithm:fastslam}. \\
+	\IncMargin{1em}
 	\begin{algorithm}
-		\caption{\textsc{Fast}SLAM}
+		\caption{\textsc{FastSLAM}}
 		\label{algorithm:fastslam}
 
 		\SetNlSty{textnormal}{}{:}
 		\SetAlgoNlRelativeSize{-1}
+		\SetNlSkip{0.2em}
+		\SetInd{1em}{1em}
 
+		\Indm
 		\KwIn{$ (X_{t - 1}, u_t, z_t) $}
 		\KwOut{$ X_t $}
+		\Indp
 		\BlankLine
 
 		$ \overline{X_t} = X_t = 0 $ \\
@@ -179,6 +184,7 @@
 
 		\Return{$ X_t $}
 	\end{algorithm}
+	\DecMargin{1em}
 
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 4. Obrázky %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -192,11 +198,13 @@
 		\centering
 		\scalebox{0.4}{
 			\includegraphics{img/etiopan.eps}
+			\,
 			\reflectbox{\includegraphics{img/etiopan.eps}}
 		}
 		\caption{Malý Etiopánek a~jeho bratříček}
 		\label{figure:etiopan}
 	\end{figure}
+	\newpage
 
 	Rozdíl mezi vektorovým \dots
 	\begin{figure}[h]
@@ -223,7 +231,39 @@
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kreslení obrázku %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{landscape}
+		\begin{figure}[h]
+			\setlength{\unitlength}{1mm}
+			\centering
+			\begin{picture}(200, 110)
+				\linethickness{1pt}
+				\put(0, 0){\framebox(200, 100){}}
 
+				\linethickness{1.5mm}
+				\put(4,14){\line(1,0){192}}
+
+				\linethickness{0.4mm}
+				\put(24, 14){\line(0, 0){36}}
+				\put(24, 50){\line(1, 0){43}}
+				\multiput(67, 45)(56, 0){2}{\line(0, 0){10}}
+				\put(67, 55){\line(1, 0){56}}
+				\put(123, 47){\line(1, 0){49}}
+				\put(172, 47){\line(0, -1){2}}
+				\multiput(43, 45)(0, -6){2}{\line(1, 0){139}}
+				\multiput(43, 45)(139, 0){2}{\line(0, -1){6}}
+				\put(43, 39){\line(1, -1){11}}
+				\put(35, 14){\line(0, 0){14}}
+				\put(35, 28){\line(1, 0){35}}
+				\put(70, 28){\line(3, -1){40}}
+				\put(75, 26){\line(0, 0){11}}
+				\put(75, 37){\line(1, 0){105}}
+				\put(180, 37){\line(0, -1){14}}
+				\put(182, 23){\line(-1, 0){97}}
+				\put(182, 23){\line(0, -1){9}}
+
+				\put(170, 80){\circle{15}}
+			\end{picture}
+			\caption{Vektorový obrázek.}
+		\end{figure}
 	\end{landscape}
 
 \end{document}
