@@ -16,3 +16,7 @@
 
 # Converted images
 *-eps-converted-to.pdf
+
+# Bibtex
+*.blg
+*.bbl

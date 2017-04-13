@@ -1,0 +1,75 @@
+% Author: Dominik Harmim <xharmi00@stud.fit.vutbr.cz>
+
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm, top=3cm, text={17cm, 24cm}]{geometry}
+\usepackage{times}
+
+% pro lepsi sazeni URL v bibliografickych citacich viz http://www.fit.vutbr.cz/~martinek/latex/czechiso.html
+\usepackage{url}
+\DeclareUrlCommand\url{\def\UrlLeft{<}\def\UrlRight{>} \urlstyle{tt}}
+
+\begin{document}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Uvodni stranka %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{titlepage}
+		\begin{center}
+			\Huge
+			\textsc{Vysoké učení technické v~Brně} \\
+			\huge
+			\textsc{Fakulta informačních technologií} \\
+			\vspace{\stretch{0.382}}
+			\LARGE
+			Typografie a~publikování\,--\,4.~projekt \\
+			\Huge
+			Bibliografické citace
+			\vspace{\stretch{0.618}}
+		\end{center}
+
+		{\Large
+			\today
+			\hfill
+			Dominik Harmim
+		}
+	\end{titlepage}
+
+	\section{Systém \LaTeX}
+
+	\subsection{Definice}
+	\LaTeX je komplexní sada příkazů, využívající propracovaný sázecí program \TeX, pro přípravu široké
+	škály dokumentů, od vědeckých článků, zpráv, prezentací, až po celé knihy. \TeX\ i~samotný \LaTeX je
+	otevřený software, k~dispozici zcela zdarma. Dokonce je možné tento sofware upravovat a~distribuovat
+	ho nebo jeho části pod jiným jménem, aby nedošlo k~záměně. O~podrobnějších rozdílech mezi systémy
+	\TeX a~\LaTeX pojednává úvodní část knihy věnované {\LaTeX}u \cite{Kopkac2004}.
+
+	\subsection{Práce s~{\LaTeX}em}
+	Práce s~celým systémem připomíná programování, protože sestává z~těchto tří kroků, jak je uvedeno
+	v~\cite{Rybicka2003}:
+	\begin{enumerate}
+		\item psaní (úprava) zdrojového textu,
+		\item překlad -- vysázení
+		\item prohlížení.
+	\end{enumerate}
+	Podrobnější informace o~tom, jak probíhá překlad zdrojových souborů do výsledného dokumentu se lze
+	dočíst v~\cite{Rybicka2003}.
+
+	\subsection{Proč používat \LaTeX}
+	\LaTeX vyniká obrovskou přesností. Pro rozsáhlé dokumenty se spoustou matematických vzorců a~jiných symbolů,
+	číslovanými obrázky, tabulkami a~odkazy na ně v textu je výhodnější použít \LaTeX\ viz \cite{Martinek2010}.
+
+	Článek \cite{Simecek2013} uvádí, že vlastnosti {\LaTeX}u můžeme shrnout do několika slov: jednoduchost,
+	elegance a~možnost být kreativní.
+
+	\subsection{Struktura dokumentu}
+	Dokument v~{\LaTeX}u je rozdělen na dvě části. První část (preambule) obsahuje globální nastavení dokumentu.
+	Druhá část už obsahuje vlastní text viz \cite{Svamberg2001}.
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Citace %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\newpage
+	\bibliographystyle{czechiso}
+	\renewcommand{\refname}{Literatura}
+	\bibliography{proj4}
+
+\end{document}
