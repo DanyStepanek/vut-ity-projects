@@ -6,10 +6,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[left=2cm, top=3cm, text={17cm, 24cm}]{geometry}
 \usepackage{times}
-
-% pro lepsi sazeni URL v bibliografickych citacich viz http://www.fit.vutbr.cz/~martinek/latex/czechiso.html
-\usepackage{url}
-\DeclareUrlCommand\url{\def\UrlLeft{<}\def\UrlRight{>} \urlstyle{tt}}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true}
 
 \begin{document}
 
@@ -35,36 +33,64 @@
 		}
 	\end{titlepage}
 
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LaTeX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\section{Systém \LaTeX}
 
 	\subsection{Definice}
-	\LaTeX je komplexní sada příkazů, využívající propracovaný sázecí program \TeX, pro přípravu široké
-	škály dokumentů, od vědeckých článků, zpráv, prezentací, až po celé knihy. \TeX\ i~samotný \LaTeX je
+	\LaTeX\ je komplexní sada příkazů, využívající propracovaný sázecí program \TeX, pro přípravu široké
+	škály dokumentů, od vědeckých článků, zpráv, prezentací, až po celé knihy. \TeX\ i~samotný \LaTeX\ je
 	otevřený software, k~dispozici zcela zdarma. Dokonce je možné tento sofware upravovat a~distribuovat
 	ho nebo jeho části pod jiným jménem, aby nedošlo k~záměně. O~podrobnějších rozdílech mezi systémy
-	\TeX a~\LaTeX pojednává úvodní část knihy věnované {\LaTeX}u \cite{Kopkac2004}.
+	\TeX\ a~\LaTeX\ pojednává \cite{Kopkac2004}.
+
 
 	\subsection{Práce s~{\LaTeX}em}
 	Práce s~celým systémem připomíná programování, protože sestává z~těchto tří kroků, jak je uvedeno
 	v~\cite{Rybicka2003}:
 	\begin{enumerate}
 		\item psaní (úprava) zdrojového textu,
-		\item překlad -- vysázení
+		\item překlad\,--\,vysázení,
 		\item prohlížení.
 	\end{enumerate}
 	Podrobnější informace o~tom, jak probíhá překlad zdrojových souborů do výsledného dokumentu se lze
 	dočíst v~\cite{Rybicka2003}.
 
+
 	\subsection{Proč používat \LaTeX}
-	\LaTeX vyniká obrovskou přesností. Pro rozsáhlé dokumenty se spoustou matematických vzorců a~jiných symbolů,
-	číslovanými obrázky, tabulkami a~odkazy na ně v textu je výhodnější použít \LaTeX\ viz \cite{Martinek2010}.
+	\LaTeX\ vyniká obrovskou přesností. Pro rozsáhlé dokumenty se spoustou matematických vzorců a~jiných symbolů,
+	číslovanými obrázky, tabulkami a~odkazy na ně v~textu je výhodnější použít \LaTeX\ viz \cite{Martinek2010}.
 
 	Článek \cite{Simecek2013} uvádí, že vlastnosti {\LaTeX}u můžeme shrnout do několika slov: jednoduchost,
 	elegance a~možnost být kreativní.
 
+
 	\subsection{Struktura dokumentu}
 	Dokument v~{\LaTeX}u je rozdělen na dvě části. První část (preambule) obsahuje globální nastavení dokumentu.
 	Druhá část už obsahuje vlastní text viz \cite{Svamberg2001}.
+
+
+	\subsection{Online editory pro \LaTeX}
+	Nevýhodou {\LaTeX}u je skutečnost, že není tak rozšířený a dostupný na všech počítačích, jako např. MS Word
+	nebo jiné běžně dostupné editory. Díky online editorům pro \LaTeX\ můžeme tuto nevýhodu minimalizovat. Příkladem
+	těchto online editorů jsou {\LaTeX}lab, Tex-On-Web, aj. viz \cite{Sokol2012}.
+
+	Existují dokonece i~nástroje pro převod dokumentů z~aplikace MS Word do {\LaTeX}u. Této problematice se věnuje
+	\cite{Simek2009}.
+
+
+	\subsection{Matematická sazba}
+	Jedna z~nejsilnějších stránek {\LaTeX}u je sazba matematického textu. \LaTeX\ tvoří vzorečky ve vnitřním
+	matematickém módu \$ \ldots \$ nebo v~display módu \$\$ \ldots \$\$. V~tomto módu lze velmi jednoduše
+	sázet zlomky, matematické symboly a~znaky, závorky a~další speciality viz \cite{Olsak2014}. Existují
+	dokonce i~nástroje, které z~ručně psaného textu dokáží vygenerovat zdrojový kód pro \LaTeX\
+	\cite{Oksuz2008}.
+
+	Příklad vysázené rovnice (lze nalézt v~\cite{CazarezCastro2012}):
+	$$
+		\eta = -2j \frac{1 - \mathrm{exp}\{ - \frac{\Delta q}{j} \}}{1 + \mathrm{exp}\{ - \frac{\Delta q}{j} \}}
+	$$
+
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Citace %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\newpage
