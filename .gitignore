@@ -21,3 +21,9 @@
 *.blg
 *.bbl
 *.out
+
+# Beamer
+*.nav
+*.snm
+*.toc
+*.vrb
